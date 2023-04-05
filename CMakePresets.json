@@ -1,5 +1,5 @@
 ﻿{
-  "version": 6,
+  "version": 4,
   "configurePresets": [
     {
       "name": "configure-base",
@@ -41,8 +41,8 @@
       }
     },
     {
-      "name": "x64-debug",
-      "displayName": "x64 Debug",
+      "name": "win-x64-debug",
+      "displayName": "win x64 Debug",
       "description": "Target Windows (64-bit) with the Visual Studio development environment. (Debug)",
       "inherits": "windows-base",
       "architecture": {
@@ -52,24 +52,24 @@
       "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug" }
     },
     {
-      "name": "x64-release",
-      "displayName": "x64 Release",
-      "description": "Target Windows (64-bit) with the Visual Studio development environment. (RelWithDebInfo)",
-      "inherits": "x64-debug",
+      "name": "win-x64-release",
+      "displayName": "win x64 Release",
+      "description": "Target Windows (64-bit) with the Visual Studio development environment. (Release)",
+      "inherits": "win-x64-debug",
       "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
     },
     {
-      "name": "Debug",
-      "displayName": "Debug",
-      "description": "Target Linux with the Visual Studio Code development environment on WSL.",
+      "name": "linux-x64-debug",
+      "displayName": "linux x64 Debug",
+      "description": "Target Linux with the Visual Studio Code development environment on WSL. (Debug)",
       "inherits": "linux-base",
       "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug" }
     },
     {
-      "name": "Release",
-      "displayName": "Release",
-      "description": "Target Linux with the Visual Studio Code development environment on WSL.",
-      "inherits": "Debug",
+      "name": "linux-x64-release",
+      "displayName": "linux x64 Release",
+      "description": "Target Linux with the Visual Studio Code development environment on WSL. (Release)",
+      "inherits": "linux-x64-debug",
       "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
     }
   ]
